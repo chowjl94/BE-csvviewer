@@ -6,6 +6,7 @@
 - AWS_BUCKET
 
 # Development
+- npm install 
 - npm run dev
 
 # Extra information

@@ -16,5 +16,8 @@
 - USER uploads file to s3 and gets storred in s3
 - Clinet will get the stored url and sign it
 - Signed url will then be loaded as csv and rendered on client
+- Did not deploy it on CSP 
 
-
+# Consideration
+- Vite + React is fast and flexible for small projects
+- S3 is used as it is scalable and secure (although setting up requires an account)

@@ -40,38 +40,6 @@ export const uploadFileToS3Service = async (file: Express.Multer.File) => {
 	}
 };
 
-export const listFilesFromS3 = async (page: number, limit: number) => {
-	const maxKeys = limit;
-	const startAfter = (page - 1) * maxKeys;
-
-	const listParams = {
-		Bucket: BUCKET_NAME,
-		MaxKeys: maxKeys,
-		StartAfter: startAfter.toString(),
-	};
-
-	try {
-		const command = new ListObjectsV2Command(listParams);
-		const response = await s3.send(command);
-
-		const files =
-			response.Contents?.map((file) => ({
-				fileName: file.Key,
-				fileUrl: `https://${BUCKET_NAME}.s3.${process.env.S3_REGION}.amazonaws.com/${file.Key}`,
-			})) || [];
-
-		return {
-			data: files,
-			page,
-			totalFiles: response.KeyCount || 0,
-			nextToken: response.NextContinuationToken,
-		};
-	} catch (err) {
-		console.log(`Error retrieving files ${err}`);
-		throw new Error(`Error retrieving files: ${err}`);
-	}
-};
-
 export const generatePresignedUrl = async (objectKey: string) => {
 	const command = new GetObjectCommand({
 		Bucket: BUCKET_NAME,

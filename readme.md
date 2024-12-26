@@ -10,6 +10,11 @@
 - npm install 
 - npm run dev
 
+# Non -development
+- npm install 
+- npm run build
+- npm run start
+
 # Extra information
 - USER uploads file to s3 and gets storred in s3
 - Clinet will get the stored url and sign it

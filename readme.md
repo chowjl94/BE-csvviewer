@@ -1,5 +1,6 @@
 # Set up instructions
-- Create a s3 bucket
+- Create a s3 bucket generate the following below
+- Add to .env
 - AWS_ACCESS_KEY_ID
 - AWS_SECRET_ACCESS_KEY
 - S3_REGION

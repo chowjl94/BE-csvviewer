@@ -7,15 +7,19 @@
 - npm install 
 - npm run dev
 
-# Non -development
+# Non - development
 - npm install 
 - npm run build
 - npm run start
+
+# Run test 
+- npm run test
 
 # Extra information
 - USER uploads file to s3 and gets storred in s3
 - Clinet will get the stored url and sign it
 - Signed url will then be loaded as csv and rendered on client
+- Used Jest for testing
 - Did not deploy it on CSP 
 
 # Consideration

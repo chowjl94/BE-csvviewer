@@ -8,6 +8,12 @@
     "rootDir": "./src",
     "types": ["jest"],
     "strict": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+  },
+  "exclude": [
+    "node_modules",
+    "tests",      
+    "**/*.test.ts", 
+    "**/*.spec.ts"
+  ]
 }

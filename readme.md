@@ -8,9 +8,8 @@
 - npm run dev
 
 # Non - development
-- npm install 
-- npm run build
-- npm run start
+- docker-compose build
+- docker-compose up
 
 # Run test 
 - npm run test
